@@ -1,0 +1,96 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2C2C2D;
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    background-image: url(Bom\ Pesadelos.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 35% 100%;
+    width: 100%;
+    height: 25vh;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 100vw;
+}
+nav > p:hover{
+    color: red;
+}
+nav > a:hover{
+    color: red;
+}
+
+main{
+    background-color: black;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 0px 0px 10px 10px;
+}
+aside{
+    background-color: rgb(26, 26, 26);
+    position: relative;
+    margin: 3vw;
+    border-radius: 10px;    
+}
+aside > p{
+    font-size: 18px;
+    color: rgb(182, 1, 1);
+    font-family: monospace;
+    text-indent: 20px;
+    font-size: 18px;
+    text-align: justify;
+}
+aside > ol{
+    list-style-position: inside;
+    color: rgb(182, 1, 1);
+    font-family: monospace;
+    text-indent: 20px;
+    font-size: 18px;
+    text-align: justify;
+}
+p{
+    color: white;
+    font-family: monospace;
+    text-indent: 20px;
+    font-size: 18px;
+    text-align: justify;
+    margin: 20px;
+    position: relative;
+}
+h6{
+    text-indent: 20px;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    text-align: justify;
+    font-size: 18px;
+    margin: 20px;
+    position: relative;
+}
+img{
+    width: 50%;
+}
+p#imagens{
+    text-align: center;
+}
+@media (max-width: 600px) {
+    header{
+        background-image: url(Bom\ Pesadelos.jpg);
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: 70% 100%;
+        width: 100%;
+        height: 25vh;
+    }
+    
+}

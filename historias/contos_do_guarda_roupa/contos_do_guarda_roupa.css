@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+body{
+    background-color: #2C2C2D;
+}
+.container{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    transition: all 400ms;
+    transition: all 400ms;
+}
+.container:hover .box{
+    filter: grayscale(100%) opacity(24%);
+}
+.box{
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    transition: all 400ms;
+    border-radius: 20px;
+}
+.container .box:hover{
+    filter: grayscale(0%) opacity(100%);
+}
+.box-1{
+    background: url("/imagem/1.png") center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 10px;
+}
+.box:nth-child(odd){
+    transform: translateY(-1px);
+}
+.box:nth-child(even){
+    transform: translateY(1px);
+}
+.box::after{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 10px 10px 14px;
+    letter-spacing: 1px;
+    text-transform: none;
+    color: red;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 400ms;
+}
+.box:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+@media (max-width: 1100px){
+    .container{
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }.box{
+        margin: 3px;
+    }
+    .box-1{
+        background-size: cover;
+        width: 40vw;
+        height: 40vh;
+    }
+}
+@media (max-width: 600px){
+    .container{
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+    }
+    .container:hover .box{
+        filter: grayscale(100%) opacity(24%);
+    }
+    .box{
+        position: relative;
+        background: var(--img) center center;
+        background-size: cover;
+        transition: all 400ms;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .box:hover{
+        filter: grayscale(0%) opacity(100%);
+    }
+    
+    .box:nth-child(odd){
+        transform: translateY(-1px);
+    }
+    .box:nth-child(even){
+        transform: translateY(1px);
+    }
+    .box::after{
+        content: attr(data-text);
+        position: absolute;
+        bottom: 20px;
+        background: #000;
+        color: #fff;
+        padding: 10px 10px 10px 14px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        transform: translateY(60px);
+        opacity: 0;
+        transition: all 400ms;
+    }
+    .box:hover::after{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 400ms;
+    }
+}
