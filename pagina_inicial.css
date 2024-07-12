@@ -12,7 +12,7 @@ body{
 }
 
 header{
-    background-image: url('/imagens/cabeça_imagem.png');
+    background-image: url('imagens/cabeça_imagem.png');
     background-repeat: no-repeat;
     background-size: 100% 99%;
     width: 100%;
