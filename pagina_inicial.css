@@ -56,15 +56,16 @@ h1#cabeçaH1{
     display: flex;
     justify-content: center;
     transition: all 400ms;
-    transition: all 400ms;
 }
 .container:hover .box{
     filter: grayscale(100%) opacity(24%);
 }
 .box{
-    height: 200px;
-    width: 250px;
-    margin: auto;
+    width: 20vw;
+    height: 80vh;
+    margin: 1em;
+    background-repeat: no-repeat;
+    background-size: contain;
     transition: all 400ms;
     border-radius: 20px;
 }
@@ -73,30 +74,14 @@ h1#cabeçaH1{
 }
 .box-1{
     background: url("/imagem/1.png") center center;
-    height: 80vh;
-    background-size: cover;
-    margin: 10px;
 }
 .box-2{
     background: url("/imagem/2.png") center center;
-    height: 80vh;
-    background-size: cover;
-    margin: 10px;
 }
 .box-3{
     background: url("/imagem/3.png") center center;
-    height: 80vh;
-    background-size: cover;
-    margin: 10px;
-
 }
-.box-4{
-    background: url("/imagem/4.png") center center;
-    height: 80vh;
-    background-size: cover;
-    margin: 10px;
 
-}
 .box:nth-child(odd){
     transform: translateY(-1px);
 }
@@ -201,22 +186,22 @@ img#img_perfil{
     display: block;
     margin: auto;
 }
-@media (max-width: 1100px){
+@media (max-width: 1260px){
     .container{
         flex-wrap: wrap;
         justify-content: center;
     }.box{
-        margin: 3px;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .box-1,.box-2,.box-3, .box-4{
-        background-size: cover;
-        width: 20vw;
-        height: 80vh;
+        width: 25vw;
+        height: 70vh;
     }
     .box::after{
         content: attr(data-text);
         position: absolute;
-        bottom: 20px;
+        bottom: 36px;
         background: #000;
         color: #fff;
         padding: 10px 10px 10px 14px;
@@ -300,12 +285,12 @@ header{
         .box::after{
             content: attr(data-text);
             position: absolute;
-            bottom: 20px;
+            bottom: 0px;
             background: #000;
             color: #fff;
             padding: 10px 10px 10px 14px;
             letter-spacing: 4px;
-            font-size: 10px;
+            font-size: 9px;
             text-transform: uppercase;
             transform: translateY(60px);
             opacity: 0;
