@@ -253,7 +253,8 @@ header{
             border-radius: 10px;
             position: relative;
             background: var(--img) center center;
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             transition: all 400ms;
             height: 35vh;
             width: 30vw;
