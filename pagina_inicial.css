@@ -225,7 +225,8 @@ header{
     height: 100vh;
 }
     .main{
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         place-content: center;
         min-height: 100vh;
     }
@@ -236,47 +237,32 @@ header{
             position: relative;
             font-family: Arial, Helvetica, sans-serif;
             color: white;
-        }
-        .container{
+        }.container{
+            flex-wrap: wrap;
+            justify-content: center;
             position: relative;
-            display: grid;
-            grid-template-columns: 1rf 1rf 1rf 1rf;
-            gap: 1em;
-            grid-template-areas: "box-1 box-2" "box-3 box-4";
-        
-            transition: all 400ms;
         }
         .container:hover .box{
             filter: grayscale(100%) opacity(24%);
         }
         .box{
-            border-radius: 10px;
             position: relative;
             background: var(--img) center center;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 100% 100%;
             transition: all 400ms;
-            height: 35vh;
-            width: 30vw;
+            border-radius: 10px;
+            width: 40vw;
+            height: 30vh;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
         }
         .container .box:hover{
             filter: grayscale(0%) opacity(100%);
         }
-        .container:has(.box-1:hover){
-            grid-template-columns: 3rf 1rf 1rf 1rf;
-        }
-        .container:has(.box-2:hover){
-            grid-template-columns: 1rf 3rf 1rf 1rf;
-        }
-        .container:has(.box-3:hover){
-            grid-template-columns: 1rf 1rf 3rf 1rf;
-        }
-        .container:has(.box-4:hover){
-            grid-template-columns: 1rf 1rf 1rf 3rf;
-        }
+        
         .box:nth-child(odd){
             transform: translateY(-1px);
         }
@@ -286,12 +272,11 @@ header{
         .box::after{
             content: attr(data-text);
             position: absolute;
-            bottom: 0px;
+            bottom: 20px;
             background: #000;
             color: #fff;
             padding: 10px 10px 10px 14px;
             letter-spacing: 4px;
-            font-size: 9px;
             text-transform: uppercase;
             transform: translateY(60px);
             opacity: 0;
